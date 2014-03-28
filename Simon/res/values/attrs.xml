@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimonButton">
+         <attr name="soundId" format="reference" />
+         <attr name="image" format="reference" />
+         <attr name="pressedImage" format="reference" />
+         <attr name="buttonNumber" format="integer" />
+     </declare-styleable>
+</resources>

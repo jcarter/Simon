@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:columnCount="2"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/centerImage"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/small_eyes_with_background" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <edu.apsu.csci.simon.SimonButton
+                android:id="@+id/greenButton"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:clickable="true"
+                app:buttonNumber="0"
+                app:image="@drawable/green_button"
+                app:pressedImage="@drawable/green_button_pressed"
+                app:soundId="@raw/beep0" />
+
+            <edu.apsu.csci.simon.SimonButton
+                android:id="@+id/redButton"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:clickable="true"
+                android:scaleX="-1"
+                app:buttonNumber="3"
+                app:image="@drawable/red_button"
+                app:pressedImage="@drawable/red_button_pressed"
+                app:soundId="@raw/beep3" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <edu.apsu.csci.simon.SimonButton
+                android:id="@+id/yellowButton"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:clickable="true"
+                android:scaleY="-1"
+                app:buttonNumber="1"
+                app:image="@drawable/yellow_button"
+                app:pressedImage="@drawable/yellow_button_pressed"
+                app:soundId="@raw/beep1" />
+
+            <edu.apsu.csci.simon.SimonButton
+                android:id="@+id/blueButton"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:clickable="true"
+                android:scaleX="-1"
+                android:scaleY="-1"
+                app:buttonNumber="2"
+                app:image="@drawable/blue_button"
+                app:pressedImage="@drawable/blue_button_pressed"
+                app:soundId="@raw/beep2" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/playersTurnTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:text="Your Turn..."
+        android:textColor="@android:color/white"
+        android:textSize="75sp" />
+
+   	<TextView
+        android:id="@+id/roundNumberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="75sp" >
+    </TextView>
+    
+   	<FrameLayout 
+   	    android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+        
+   	    <RelativeLayout 
+   	        android:layout_width="match_parent"
+    		android:layout_height="match_parent">
+
+	   		<Button
+	   		    android:id="@+id/newGameButton"
+	   		    android:layout_width="300dp"
+	   		    android:layout_height="100dp"
+	   		    android:layout_alignParentBottom="true"
+	   		    android:layout_centerHorizontal="true"
+	   		    android:layout_marginBottom="35dp"
+	   		    android:text="New Game?"
+	   		    android:textColor="@android:color/white"
+	   		    android:visibility="invisible"
+	   		    android:textSize="40sp"/>
+
+	   		<ImageView
+	   		    android:id="@+id/magicLee"
+	   		    android:layout_width="500dp"
+	   		    android:layout_height="400dp"
+	   		    android:layout_marginBottom="-400dp"
+	   		    android:layout_alignParentBottom="true"
+	   		    android:layout_alignParentLeft="true"
+	   		    android:layout_alignParentRight="true"
+	   		    android:scaleType="fitXY"
+	   		    android:src="@drawable/magic_lee" />
+
+   		</RelativeLayout>
+   	    
+   	</FrameLayout>
+
+</RelativeLayout>
